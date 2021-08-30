@@ -1,0 +1,13 @@
+package main
+import ("fmt")
+
+func main() {
+
+  var a string = "compensatorio"
+  var b int = 25
+  var c bool = true
+
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+}
