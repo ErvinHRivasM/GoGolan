@@ -3,6 +3,9 @@ import ("fmt")
 
 func main() {
 
+  //Camel case, pascal case and Snake case are the waves that 
+  //we named the variables
+
   var a string = "compensatorio"
   var b int = 25
   var c bool = true
@@ -10,4 +13,22 @@ func main() {
   fmt.Println(a)
   fmt.Println(b)
   fmt.Println(c)
+
+  
+  var localvar string
+  localvar = "John"
+  fmt.Println(localvar)
+
+  localdeclar := 1
+  fmt.Println(localdeclar)
+
+  //declare multiple varibles in the same line
+  var ax, bx, cx, dx int = 1, 3, 5, 7
+
+  //Variable Declaration in a Block
+  var (
+     a int
+     b int = 1
+     c string = "hello"
+   )
 }

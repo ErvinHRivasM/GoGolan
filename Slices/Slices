@@ -1,0 +1,58 @@
+package main
+import ("fmt")
+
+/*
+  Slices are similar to arrays, but are more powerful and flexible.
+  In Go, there are several ways to create a slice:
+
+  Using the []datatype{values} format
+  Create a slice from an array
+  Using the make() function
+*/
+
+func main() {
+  myslice1 := []int{}
+  fmt.Println(len(myslice1))
+  fmt.Println(cap(myslice1))
+  fmt.Println(myslice1)
+
+  myslice2 := []string{"Go", "Slices", "Are", "Powerful"}
+  fmt.Println(len(myslice2))
+  fmt.Println(cap(myslice2))
+  fmt.Println(myslice2)
+
+  var myarray = [length]datatype{values} // An array
+  myslice := myarray[start:end] // A slice made from the array
+
+  /*
+  In the example above myslice is a slice with length 2. It is made from arr1 which is an array with length 6.
+  The slice starts from the second element of the array which has value 12. The slice can grow to the end of 
+  the array. This means that the capacity of the slice is 4.
+  If myslice started from element 0, the slice capacity would be 6.
+  */
+
+  arr1 := [6]int{10, 11, 12, 13, 14,15}
+  myslice := arr1[2:4]
+
+  fmt.Printf("myslice = %v\n", myslice)
+  fmt.Printf("length = %d\n", len(myslice))
+  fmt.Printf("capacity = %d\n", cap(myslice))
+
+
+  //Create a Slice With The make() Function
+  //The make() function can also be used to create a slice.
+  slice_name := make([]type, length, capacity)
+
+  myslice1 := make([]int, 5, 10)
+  fmt.Printf("myslice1 = %v\n", myslice1)
+  fmt.Printf("length = %d\n", len(myslice1))
+  fmt.Printf("capacity = %d\n", cap(myslice1))
+
+  // with omitted capacity
+  myslice2 := make([]int, 5)
+  fmt.Printf("myslice2 = %v\n", myslice2)
+  fmt.Printf("length = %d\n", len(myslice2))
+  fmt.Printf("capacity = %d\n", cap(myslice2))
+
+
+}

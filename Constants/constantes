@@ -1,0 +1,28 @@
+package main
+import ("fmt")
+
+//The value of a constant must be assigned when you declare it.
+//Constants can be declared both inside and outside of a function
+//There are two types of constant: 
+//Typed constants
+//Untyped constants
+
+const A int = 1
+const PI = 3.14
+
+
+//Multiple Constants Declaration
+//Multiple constants can be grouped together into a block for readability:
+const (
+  Ac int = 1
+  Bc = 3.14
+  Cc = "Hi!"
+)
+
+func main() {
+
+  fmt.Println(PI)
+  fmt.Println(A)
+
+
+}
