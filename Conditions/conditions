@@ -1,0 +1,60 @@
+package main
+import ("fmt")
+
+/*
+  Conditional statements are used to perform different actions based on different conditions.
+  x > y 
+  x != y  
+  (x > y) && (y > z)  
+  (x == y) || z
+*/
+
+func main() {
+  if 20 > 18 {
+    fmt.Println("20 is greater than 18")
+  }
+
+  //Use the else statement to specify a block of code to be executed if the condition is false.
+  time := 20
+  if (time < 18) {
+    fmt.Println("Good day.")
+  } else {
+    fmt.Println("Good evening.")
+  }
+
+  //Having the else brackets in a different line will raise an error:
+  temperature := 14
+  if (temperature > 15) {
+    fmt.Println("It is warm out there.")
+  } // this raises an error
+  else {
+    fmt.Println("It is cold out there.")
+  }
+
+  //else if statement
+  //If conditions1 and condition2 are both correct, only the code for condition1 are executed:
+  time := 22
+  if time < 10 {
+    fmt.Println("Good morning.")
+  } else if time < 20 {
+    fmt.Println("Good day.")
+  } else {
+    fmt.Println("Good evening.")
+  }
+
+
+//The Nested if Statement
+num := 20
+  if num >= 10 {
+    fmt.Println("Num is more than 10.")
+    if num > 15 {
+      fmt.Println("Num is also more than 15.")
+     }
+  } else {
+    fmt.Println("Num is less than 10.")
+  }
+
+
+
+}
+

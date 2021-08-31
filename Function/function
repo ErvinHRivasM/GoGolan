@@ -1,0 +1,68 @@
+package main
+import ("fmt")
+
+/*
+  A function is a block of statements that can be used repeatedly in a program.
+  A function will not execute automatically when a page loads.
+  A function will be executed by a call to the function.
+*/
+
+
+func myMessage() {
+  fmt.Println("I just got executed!")
+}
+
+func familyName(fname string) {
+  fmt.Println("Hello", fname, "Refsnes")
+}
+
+
+func myFunction(x int, y int) int {
+  return x + y
+}
+
+//Here, myFunction() returns one integer (result) and one string (txt1)
+func myFunctionX(x int, y string) (result int, txt1 string) {
+  result = x + x
+  txt1 = y + " World!"
+  return
+}
+
+
+func factorial_recursion(x float64) (y float64) {
+  if x > 0 {
+     y = x * factorial_recursion(x-1)
+  } else {
+     y = 1
+  }
+  return
+}
+
+func main() {
+
+  // code to be executed
+   myMessage() // call the function
+   myMessage()
+   myMessage()
+
+  familyName("Liam")
+
+  total := myFunction(1, 2)
+  fmt.Println(total)
+
+  a, b := myFunctionX(5, "Hello")
+  fmt.Println(a, b)
+
+  _, b := myFunctionX(5, "Hello")
+  fmt.Println(b)
+
+  a, _ := myFunction(5, "Hello")
+  fmt.Println(a)
+
+  fmt.Println(factorial_recursion(4))
+
+
+
+
+}
+
